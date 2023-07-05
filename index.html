@@ -1,20 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Jira board Presenter Generator</title>
+    <title>Jira Board Presenter Generator</title>
     <style>
         body {
-            background-color: lightblue;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            background: linear-gradient(45deg, #6f00ff, #ff00ff, #00dbde, #fc00ff, #00dbde, #6f00ff, #ff00ff);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
         h1 {
-            color: black;
+            color: purple;
             text-align: center;
+            font-size: 36px;
+            margin-bottom: 30px;
         }
 
         p {
-            font-family: georgia;
             font-size: 20px;
+        }
+
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #FFD700;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 6px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #FFA500;
+        }
+
+        .icon {
+            margin-right: 10px;
         }
     </style>
     <script>
@@ -43,8 +88,15 @@
     </script>
 </head>
 <body>
-    <h1>Random Name Picker</h1>
-    <button onclick="pickRandomName()">Pick a Name!</button>
+    <h1>
+        <span class="icon">🎉</span>
+        Welcome to the Jira Board Presenter Generator
+        <span class="icon">🎉</span>
+    </h1>
+    <button class="button" onclick="pickRandomName()">
+        <span class="icon">🔮</span>
+        Pick a Random Name!
+    </button>
     <br>
     <p id="result"></p>
 </body>
