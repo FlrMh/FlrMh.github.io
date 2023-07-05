@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    <title>Jira board Presenter Generator</title>
+    <script>
+        function pickRandomName() {
+            var names = [
+                "Florina",
+    			"Mohammed",
+    			"Thomas",
+    			"Ed",
+    			"Fraser",
+    			"Luis",
+    			"Tom",
+    			"Rachel",
+    			"Ibi",
+    			"Alex 40",
+    			"Alex Feb",
+    			"Dave",
+            ];
+
+            var randomIndex = Math.floor(Math.random() * names.length);
+            var randomName = names[randomIndex];
+
+            var resultElement = document.getElementById("result");
+            resultElement.textContent = randomName;
+        }
+    </script>
+<style>
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+}
+
+p {
+  font-family: georgia;
+  font-size: 20px;
+}
+</head>
+<body>
+    <h1>Random Name Picker</h1>
+    <button onclick="pickRandomName()">Pick a Name!</button>
+    <br>
+    <p id="result"></p>
+</body>
+</html>
