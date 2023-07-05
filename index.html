@@ -1,23 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
     <title>Jira board Presenter Generator</title>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+
+        h1 {
+            color: black;
+            text-align: center;
+        }
+
+        p {
+            font-family: georgia;
+            font-size: 20px;
+        }
+    </style>
     <script>
         function pickRandomName() {
             var names = [
                 "Florina",
-    			"Mohammed",
-    			"Thomas",
-    			"Ed",
-    			"Fraser",
-    			"Luis",
-    			"Tom",
-    			"Rachel",
-    			"Ibi",
-    			"Alex 40",
-    			"Alex Feb",
-    			"Dave",
+                "Mohammed",
+                "Thomas",
+                "Ed",
+                "Fraser",
+                "Luis",
+                "Tom",
+                "Rachel",
+                "Ibi",
+                "Alex 40",
+                "Alex Feb",
+                "Dave"
             ];
 
             var randomIndex = Math.floor(Math.random() * names.length);
@@ -27,20 +41,6 @@
             resultElement.textContent = randomName;
         }
     </script>
-<style>
-body {
-  background-color: lightblue;
-}
-
-h1 {
-  color: black;
-  text-align: center;
-}
-
-p {
-  font-family: georgia;
-  font-size: 20px;
-}
 </head>
 <body>
     <h1>Random Name Picker</h1>
